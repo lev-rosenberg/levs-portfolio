@@ -15,6 +15,9 @@ export default function NavBar() {
           <li>
             <Link href="/Projects">Projects</Link>
           </li>
+          <li>
+            <Link href="/Contact">Contact</Link>
+          </li>
         </ul>
       </nav>
       <ThemeToggle />

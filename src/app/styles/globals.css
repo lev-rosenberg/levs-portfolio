@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --bg-start-rgb: 214, 219, 220;
-  --bg-purple-rgb: 70, 51, 160;
-  --txt-purple-rgb: 72, 47, 223;
-  --accent-gold-rgb: 255, 215, 0;
-  --toggle-color: 255, 215, 0;
+  --fg-rgb: 0, 0, 0; /* black -> white */
+  --bg-bw-rgb: 214, 219, 220; /* white/light grey -> black */
+  --bg-purple-rgb: 70, 51, 160; /* purple */
+  --txt-purple-rgb: 72, 47, 223; /* purple lite */
+  --accent-gold-rgb: 255, 215, 0; /* gold */
+  --toggle-gw-rgb: 255, 215, 0; /* gold */
 }
 
 [data-theme="dark"] {
-  --foreground-rgb: 255, 255, 255;
-  --bg-start-rgb: 0, 0, 0;
+  --fg-rgb: 255, 255, 255;
+  --bg-bw-rgb: 0, 0, 0;
   --bg-purple-rgb: 40, 21, 120;
   --txt-purple-rgb: 100, 80, 255;
   --accent-gold-rgb: 255, 215, 0;
-  --toggle-color: 40, 21, 120;
+  --toggle-gw-rgb: 255, 255, 255;
 }
 
 @layer utilities {
@@ -27,19 +27,27 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--fg-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--bg-purple-rgb))
     )
-    rgb(var(--bg-start-rgb));
+    rgb(var(--bg-bw-rgb));
   /* font-family: 'Inter', monospace; */
   font-weight: 300;
+  transition: all 0.2s ease-in-out;
 }
 
 h1 {
   font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.5rem;
@@ -59,17 +67,41 @@ button {
   color: white;
 }
 
+input {
+  color: rgb(var(--bg-bw-rgb))
+}
+
+textarea {
+  color: rgb(var(--bg-bw-rgb))
+}
+
 .theme-toggle {
   position: fixed;
   top: 0.5rem;
   right: 0.5rem;
-  background-color: rgb(var(--toggle-color));
-  color: rgb(var(--foreground-rgb));
-  border: rgb(var(--foreground-rgb)) 1px solid;
+  background-color: rgb(var(--bg-purple-rgb));
+  color: rgb(var(--toggle-gw-rgb));
+  border: rgb(var(--toggle-gw-rgb)) 1px solid;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 .theme-toggle:hover {
   box-shadow: 0px 0px 10px rgb(var(--toggle-color));
+}
+
+.project-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: rgb(var(--bg-bw-rgb));
+  color: rgb(var(--fg-rgb));
+  width: 50rem;
+  border-top: 4px solid rgb(var(--accent-gold-rgb));
+  border-right: 4px solid rgb(var(--accent-gold-rgb));
+  /* border-bottom: 1px solid rgb(var(--fg-rgb));
+  border-left: 1px solid rgb(var(--fg-rgb)); */
+  box-shadow: 8px -5px 0px 0px rgb(var(--bg-purple-rgb));
 }
