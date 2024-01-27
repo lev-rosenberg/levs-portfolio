@@ -1,29 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 // from the formspree.io website
 export default function ContactForm() {
   const [submitted, setSubmitted] = React.useState(false);
   const [state, handleSubmit] = useForm("xkndorjr");
-  // if (state.succeeded) {
-  //   return <p>Thanks for joining!</p>;
-  // }
-  function handleFormSubmission(e: React.FormEvent<HTMLFormElement>) {
-    // e.preventDefault();
-    setSubmitted(true);
-    console.log("form submission");
-    const form = document.getElementById("contact-form") as HTMLFormElement;
-    form.reset();
-    handleSubmit(e);
-  }
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setSubmitted(true);
+    }
+  }, [state]);
+
   return (
     <div className="contact-form">
       {!submitted ? (
         <form
           id="contact-form"
-          onSubmit={handleFormSubmission}
+          onSubmit={handleSubmit}
           className="flex flex-col gap-3 w-full"
         >
           <label htmlFor="email">Email Address</label>
