@@ -7,12 +7,14 @@ import { faSun } from "@fortawesome/free-regular-svg-icons";
 export default function ThemeToggle() {
   // this local storage x nextjs compatibility inspired by https://hackernoon.com/storing-and-retrieving-data-in-nextjs-using-localstorage-and-typescript
   const [isDarkMode, setIsDarkMode] = useState(() => {
+    // if they don't have data stored yet, default to dark mode
     if (typeof window !== "undefined") {
       const darkMode = window.localStorage.getItem("theme");
+      // if they don't have data stored yet, default to dark mode
       if (darkMode === null || darkMode === undefined) {
         return true;
       }
-      return `${darkMode}` ? true : false;
+      return darkMode == "dark" ? true : false;
     }
     return true;
   });
