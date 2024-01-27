@@ -12,7 +12,7 @@ export default function GeneralLayout({ children }: LayoutProps) {
     <div className="flex flex-col h-screen justify-between p-3">
       <NavBar />
       <Me />
-      <main className="h-full p-10">{children}</main>
+      <main className="overflow-clip px-10 pt-10 h-full">{children}</main>
       <Foot />
     </div>
   );

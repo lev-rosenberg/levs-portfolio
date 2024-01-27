@@ -1,12 +1,16 @@
-import { Project } from "next/dist/build/swc";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faSpotify, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 type ProjectItemProps = {
   title: string;
   description: string;
   image: string;
-  link: string;
   skills: string[];
+  link?: string;
+  spotify?: string;
+  youtube?: string;
 };
 
 export default function ProjectItem({
@@ -15,18 +19,41 @@ export default function ProjectItem({
   image,
   link,
   skills,
+  spotify,
+  youtube,
 }: ProjectItemProps) {
   return (
     <div className="project-item">
-      <div>
-        <Image src={image} alt={""} width={200} height={200} />
+      <div className="project-img relative self-center w-24 h-24">
+        <Image className="project-img" src={image} alt={""} fill={true} />
       </div>
-      <div className="flex-flex col pl-3">
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <div className="flex">
+      <div className="flex flex-col w-full h-full pl-3 justify-between text-wrap">
+        <div>
+          <div className="flex justify-between">
+            <h2>{title}</h2>
+            <div className="flex gap-3">
+              {link && (
+                <a href={link} target="_blank">
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                </a>
+              )}
+              {spotify && (
+                <a href={spotify} target="_blank">
+                  <FontAwesomeIcon icon={faSpotify} />
+                </a>
+              )}
+              {youtube && (
+                <a href={youtube} target="_blank">
+                  <FontAwesomeIcon icon={faYoutube} />
+                </a>
+              )}
+            </div>
+          </div>
+          <p>{description}</p>
+        </div>
+        <div className="flex pt-5 flex-wrap">
           {skills.map((skill, i) => (
-            <p className="py-1 px-3 mr-1 bg-indigo-300 rounded" key={i}>
+            <p className="skill" key={i}>
               {skill}
             </p>
           ))}

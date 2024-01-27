@@ -8,7 +8,10 @@
   --bg-purple-rgb: 70, 51, 160; /* purple */
   --txt-purple-rgb: 72, 47, 223; /* purple lite */
   --accent-gold-rgb: 255, 215, 0; /* gold */
-  --toggle-gw-rgb: 255, 215, 0; /* gold */
+  --toggle-gw-rgb: 255, 215, 0; /* gold -> white*/
+  --toggle-pw-rgb: 255, 255, 255; /* white -> purple*/
+  --ul-bg-rgb: 243, 235, 255; /* purple-ish white */
+
 }
 
 [data-theme="dark"] {
@@ -16,8 +19,9 @@
   --bg-bw-rgb: 0, 0, 0;
   --bg-purple-rgb: 40, 21, 120;
   --txt-purple-rgb: 100, 80, 255;
-  --accent-gold-rgb: 255, 215, 0;
   --toggle-gw-rgb: 255, 255, 255;
+  --toggle-pw-rgb: 100, 80, 255;
+  --ul-bg-rgb: 0, 0, 0, 0;
 }
 
 @layer utilities {
@@ -28,52 +32,120 @@
 
 body {
   color: rgb(var(--fg-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--bg-purple-rgb))
-    )
-    rgb(var(--bg-bw-rgb));
+  background: radial-gradient(ellipse at 20% 50%, rgb(var(--bg-bw-rgb)), rgb(var(--bg-purple-rgb)));
   /* font-family: 'Inter', monospace; */
   font-weight: 300;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.4;
   margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  line-height: 1.4; /* Slightly increased line height for readability */
 }
 
 strong {
   font-weight: 700;
   color: rgb(var(--txt-purple-rgb));
-  text-shadow: 1px 1px 1px rgb(var(--accent-gold-rgb));
+  text-shadow: 1.5px 1.5px 1px rgb(var(--accent-gold-rgb));
 }
 
 button {
-  border-radius: 8px;
-  background-color: rgb(var(--txt-purple-rgb));
   padding: 0.2rem 0.5rem;
-  margin: 0 0.3rem;
-  color: white;
+  margin: 0 0.2rem;
+  box-shadow: 0px 0px 3px rgba(var(--txt-purple-rgb));
+  /* background: radial-gradient(ellipse at 10% 50%, rgb(var(--fg-rgb)), rgb(var(--bg-purple-rgb)) ); */
+  border-radius: 8px;
+  color: rgb(var(--fg-rgb));
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 8px rgba(var(--txt-purple-rgb));
+}
+
+a {
+  transition: color 0.1s ease-in-out;
+}
+
+a:hover {
+  color: rgb(var(--txt-purple-rgb));
 }
 
 input {
-  color: rgb(var(--bg-bw-rgb))
+  color: rgb(var(--bg-bw-rgb));
+  border-radius: 5px;
+  padding: 0.5rem;
 }
 
 textarea {
-  color: rgb(var(--bg-bw-rgb))
+  color: rgb(var(--bg-bw-rgb));
+  border-radius: 5px;
+  padding: 0.5rem;
+  height: 20vh;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    background: radial-gradient(ellipse at 35% 50%, rgb(var(--bg-bw-rgb)), rgb(var(--bg-purple-rgb)));
+  }
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: rgb(var(--fg-rgb));
+  background-color: rgb(var(--ul-bg-rgb));
+  box-shadow: 0px 0px 3px rgba(var(--txt-purple-rgb));
+  /* background: linear-gradient(90deg, rgb(var(--bg-bw-rgb)), rgb(var(--toggle-gw-rgb))); */
+}
+
+
+/* Page Styles */
+
+.left-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding-left: 4rem;
+}
+
+.left-page.center-page {
+  justify-content: center;
+}
+
+.left-page.top-page {
+  padding-top: 2rem;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .left-page {
+    width: 100%;
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+}
+
+/* Component Styles */
 
 .theme-toggle {
   position: fixed;
@@ -90,18 +162,100 @@ textarea {
   box-shadow: 0px 0px 10px rgb(var(--toggle-color));
 }
 
+.silouette {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 33vw;
+  height: 50vw;
+  overflow: hidden;
+}
+
+.silouette img {
+  object-fit: contain;
+  object-position: right bottom;
+  /* width: 100%;
+  height: 100%; */
+}
+
 .project-item {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 1rem;
-  border-radius: 6px;
-  background-color: rgb(var(--bg-bw-rgb));
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 3px  rgba(var(--toggle-pw-rgb));
+  border-radius: 8px;
   color: rgb(var(--fg-rgb));
-  width: 50rem;
-  border-top: 4px solid rgb(var(--accent-gold-rgb));
-  border-right: 4px solid rgb(var(--accent-gold-rgb));
-  /* border-bottom: 1px solid rgb(var(--fg-rgb));
-  border-left: 1px solid rgb(var(--fg-rgb)); */
-  box-shadow: 8px -5px 0px 0px rgb(var(--bg-purple-rgb));
+  background: rgb(var(--bg-bw-rgb), 0.3);
+  transition: all 0.2s ease-in-out;
+  padding: 1rem;
+  height: fit-content;
+}
+
+.project-img {
+  object-fit: contain;
+}
+
+.project-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 8px  rgba(var(--toggle-pw-rgb));
+  /* background: rgb(var(--bg-purple-rgb)); */
+}
+
+.project-item .skill { 
+  margin: 0.3rem 0.3rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  background-color: rgb(var(--txt-purple-rgb), 0.3);
+  color: rgb(var(--fg-rgb));
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0px 0px 3px  rgba(var(--toggle-pw-rgb));
+  border-radius: 8px;
+  color: rgb(var(--fg-rgb));
+  background: rgb(var(--bg-bw-rgb), 0.3);
+  /* transition: all 0.2s ease-in-out; */
+  width: 24rem;
+  height: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+  .silouette {
+    display: none;
+  }
+}
+
+
+/* Other Styling Classes */
+
+.left-border { 
+  border-left: 2px solid rgb(var(--txt-purple-rgb));
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.p-underline {
+  color: rgb(var(--txt-rgb));
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+.p-underline:hover {
+  color: rgb(var(--txt-purple-rgb));
+
+}
+.p-underline.active {
+  border-bottom: 2px solid rgb(var(--txt-purple-rgb));
+}
+
+@media screen and (max-width: 768px) {
+  .project-img {
+    display: none;
+  }
 }

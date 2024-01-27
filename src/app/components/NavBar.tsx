@@ -1,22 +1,51 @@
+"use client";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
+import { usePathname } from "next/navigation";
+
 export default function NavBar() {
+  const pathname = usePathname();
+
   return (
     <header>
       <nav>
-        <ul className="flex gap-3 justify-center">
+        <ul>
           <li>
-            <Link href="/">Home</Link>
+            <Link
+              className={`p-underline ${pathname === "/" ? "active" : ""}`}
+              href="/"
+            >
+              Home
+            </Link>
+          </li>
+          {/* <li>
+            <Link
+              className={`p-underline ${pathname === "/About" ? "active" : ""}`}
+              href="/About"
+            >
+              About
+            </Link>
+          </li> */}
+          <li>
+            <Link
+              className={`p-underline ${
+                pathname === "/Projects" ? "active" : ""
+              }`}
+              href="/Projects"
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <Link href="/About">About</Link>
-          </li>
-          <li>
-            <Link href="/Projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/Contact">Contact</Link>
+            <Link
+              className={`p-underline ${
+                pathname === "/Contact" ? "active" : ""
+              }`}
+              href="/Contact"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

@@ -19,13 +19,27 @@ export default function ContactForm() {
     handleSubmit(e);
   }
   return (
-    <div>
+    <div className="contact-form">
       {!submitted ? (
-        <form id="contact-form" onSubmit={handleFormSubmission}>
+        <form
+          id="contact-form"
+          onSubmit={handleFormSubmission}
+          className="flex flex-col gap-3 w-full"
+        >
           <label htmlFor="email">Email Address</label>
-          <input id="email" type="email" name="email" />
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="example@gmail.com"
+          />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
-          <textarea id="message" name="message" />
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Let me know what you're looking for!"
+          />
           <ValidationError
             prefix="Message"
             field="message"
