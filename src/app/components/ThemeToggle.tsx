@@ -5,12 +5,17 @@ import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-regular-svg-icons";
 
 export default function ThemeToggle() {
-  let darkMode = localStorage.getItem("theme");
-  const [isDarkMode, setIsDarkMode] = useState(darkMode === "dark");
-
-  if (!darkMode) {
-    localStorage.setItem("theme", "light");
-  }
+  // this local storage x nextjs compatibility inspired by https://hackernoon.com/storing-and-retrieving-data-in-nextjs-using-localstorage-and-typescript
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      const darkMode = window.localStorage.getItem("theme");
+      if (darkMode === null || darkMode === undefined) {
+        return true;
+      }
+      return `${darkMode}` ? true : false;
+    }
+    return true;
+  });
 
   useEffect(() => {
     if (isDarkMode) {
