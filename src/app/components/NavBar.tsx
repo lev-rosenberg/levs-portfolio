@@ -19,14 +19,6 @@ export default function NavBar() {
               Home
             </Link>
           </li>
-          {/* <li>
-            <Link
-              className={`p-underline ${pathname === "/About" ? "active" : ""}`}
-              href="/About"
-            >
-              About
-            </Link>
-          </li> */}
           <li>
             <Link
               className={`p-underline ${

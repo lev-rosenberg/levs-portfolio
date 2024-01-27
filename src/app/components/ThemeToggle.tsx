@@ -5,27 +5,26 @@ import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-regular-svg-icons";
 
 export default function ThemeToggle() {
-  const storage = window.localStorage;
-  let darkMode = storage.getItem("theme");
+  let darkMode = localStorage.getItem("theme");
   const [isDarkMode, setIsDarkMode] = useState(darkMode === "dark");
 
   if (!darkMode) {
-    storage.setItem("theme", "light");
+    localStorage.setItem("theme", "light");
   }
 
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.setAttribute("data-theme", "dark");
-      storage.setItem("theme", "dark");
+      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.setAttribute("data-theme", "light");
-      storage.setItem("theme", "light");
+      localStorage.setItem("theme", "light");
     }
     const checkbox = document.getElementById("checkbox") as HTMLInputElement;
     if (checkbox) {
       checkbox.checked = isDarkMode;
     }
-  }, [isDarkMode, storage]);
+  }, [isDarkMode]);
 
   return (
     <div
