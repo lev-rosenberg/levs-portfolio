@@ -86,13 +86,13 @@ a:hover {
 }
 
 input {
-  color: rgb(var(--bg-bw-rgb));
+  color: black;
   border-radius: 5px;
   padding: 0.5rem;
 }
 
 textarea {
-  color: rgb(var(--bg-bw-rgb));
+  color: black;
   border-radius: 5px;
   padding: 0.5rem;
   height: 20vh;
@@ -229,6 +229,9 @@ ul {
   .silouette {
     display: none;
   }
+  .contact-form {
+    width: 100%;
+  }
 }
 
 
@@ -254,8 +257,16 @@ ul {
   border-bottom: 2px solid rgb(var(--txt-purple-rgb));
 }
 
+.center-text {
+  width: 35rem;
+  padding-bottom: 2rem;
+}
+
 @media screen and (max-width: 768px) {
   .project-img {
     display: none;
+  }
+  .center-text {
+    width: 100%;
   }
 }

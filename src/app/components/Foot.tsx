@@ -9,7 +9,7 @@ import {
 
 export default function Foot() {
   return (
-    <footer className="border-t p-2">
+    <footer className="border-t pt-3">
       <ul>
         <li>
           <a

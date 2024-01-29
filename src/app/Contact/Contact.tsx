@@ -3,12 +3,11 @@ import ContactForm from "../components/ContactForm";
 export default function Contact() {
   return (
     <GeneralLayout>
-      <div className="flex flex-col text-center items-center pb-3">
-        {/* <div className="left-page center-page"> */}
+      <div className="flex flex-col text-center items-center pb-3 h-full w-full overflow-y-scroll">
         <h1>
           <strong className="text-5xl">Contact Me</strong>
         </h1>
-        <div className="w-96 pb-10">
+        <div className="center-text">
           <p>
             Interested in my work? Message me here! I&apos;ll get back to you
             ASAP.

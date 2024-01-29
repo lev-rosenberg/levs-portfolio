@@ -15,7 +15,7 @@ export default function ContactForm() {
   }, [state]);
 
   return (
-    <div className="contact-form">
+    <div className="contact-form w-full">
       {!submitted ? (
         <form
           id="contact-form"
