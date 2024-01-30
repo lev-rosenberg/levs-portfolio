@@ -126,11 +126,12 @@ ul {
   height: 100%;
   width: 50%;
   padding-left: 4rem;
-}
-
-.left-page.center-page {
   justify-content: center;
 }
+/* 
+.left-page.center-page {
+  justify-content: center;
+} */
 
 .left-page.top-page {
   padding-top: 2rem;
@@ -142,6 +143,9 @@ ul {
     width: 100%;
     padding-left: 0;
     justify-content: flex-start;
+  }
+  .top-page {
+    padding-top: 0;
   }
 }
 

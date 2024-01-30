@@ -8,6 +8,7 @@ export default function Me() {
         alt="Picture of the author"
         fill={true}
         sizes="(max-width: 768px) 50vw"
+        priority={true}
       />
     </div>
   );

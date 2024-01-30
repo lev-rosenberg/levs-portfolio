@@ -12,12 +12,14 @@ export default function ThemeToggle() {
       const darkMode = window.localStorage.getItem("theme");
       // if they don't have data stored yet, default to dark mode
       if (darkMode === null || darkMode === undefined) {
-        return true;
+        return false;
+      } else {
+        return darkMode == "dark" ? true : false;
       }
-      return darkMode == "dark" ? true : false;
     }
-    return true;
+    return false;
   });
+  const [selectedTheme, setSelectedTheme] = useState<string>();
 
   useEffect(() => {
     if (isDarkMode) {
@@ -31,6 +33,9 @@ export default function ThemeToggle() {
     if (checkbox) {
       checkbox.checked = isDarkMode;
     }
+    setSelectedTheme(`${isDarkMode ? "dark" : "light"}`);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDarkMode]);
 
   return (
@@ -38,7 +43,7 @@ export default function ThemeToggle() {
       className="theme-toggle flex justify-center items-center w-8 h-8 bg-indigo-500 rounded-full"
       onClick={() => setIsDarkMode(!isDarkMode)}
     >
-      {isDarkMode ? (
+      {selectedTheme == "dark" ? (
         <FontAwesomeIcon icon={faMoon} size="xs" className="icon" />
       ) : (
         <FontAwesomeIcon icon={faSun} size="xs" className="icon" />
