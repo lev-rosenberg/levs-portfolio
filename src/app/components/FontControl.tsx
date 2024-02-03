@@ -1,7 +1,8 @@
 "use client";
 import { Context } from "../context";
 import React, { useContext, useState } from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 export default function FontControl() {
   const { state, dispatch } = useContext(Context);
   const [fontSize, setFontSize] = useState(state.fontSize);
@@ -17,9 +18,19 @@ export default function FontControl() {
 
   return (
     <div className="flex font-control">
-      <button onClick={() => handleFontSizeChange("-")}>-</button>
-      <button onClick={() => handleFontSizeChange("+")}>+</button>
-      <p className="ml-3">Font Size: {fontSize}</p>
+      <p className="mr-2 text-2xl">Aa</p>
+      <button
+        className="rounded-full text-base"
+        onClick={() => handleFontSizeChange("-")}
+      >
+        <FontAwesomeIcon icon={faMinus} />
+      </button>
+      <button
+        className="rounded-full text-base"
+        onClick={() => handleFontSizeChange("+")}
+      >
+        <FontAwesomeIcon icon={faPlus} />
+      </button>
     </div>
   );
 }

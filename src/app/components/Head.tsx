@@ -1,7 +1,7 @@
 "use client";
-import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import FontControl from "./FontControl";
+import NavBar from "./NavBar";
 import { usePathname } from "next/navigation";
 import { useContext } from "react";
 import { Context } from "../context";
@@ -11,38 +11,7 @@ export default function Head() {
   return (
     <header style={{ fontSize: `${state.fontSize}px` }}>
       <FontControl />
-      <nav>
-        <ul>
-          <li>
-            <Link
-              className={`p-underline ${pathname === "/" ? "active" : ""}`}
-              href="/"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`p-underline ${
-                pathname === "/Projects" ? "active" : ""
-              }`}
-              href="/Projects"
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`p-underline ${
-                pathname === "/Contact" ? "active" : ""
-              }`}
-              href="/Contact"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <NavBar />
       <ThemeToggle />
     </header>
   );
