@@ -10,10 +10,10 @@ type LayoutProps = {
 
 export default function GeneralLayout({ children }: LayoutProps) {
   return (
-    <div className="flex flex-col h-screen justify-between p-3">
+    <div className="layout">
       <Head />
       <Me />
-      <main className="overflow-clip px-10 pt-10 h-full">{children}</main>
+      <main className="overflow-clip h-full">{children}</main>
       <Foot />
     </div>
   );

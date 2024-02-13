@@ -2,7 +2,8 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faSpotify, faYoutube } from "@fortawesome/free-brands-svg-icons";
-
+import { Context } from "../context";
+import { useContext } from "react";
 type ProjectItemProps = {
   title: string;
   description: string;
@@ -11,6 +12,7 @@ type ProjectItemProps = {
   link?: string;
   spotify?: string;
   youtube?: string;
+  pdf?: string;
 };
 
 export default function ProjectItem({
@@ -21,9 +23,21 @@ export default function ProjectItem({
   skills,
   spotify,
   youtube,
+  pdf,
 }: ProjectItemProps) {
+  const { dispatch } = useContext(Context);
+
+  function handleProjectPreviewChange() {
+    const url = link ? link : pdf ? pdf : "";
+    console.log("url", url);
+    dispatch({
+      type: "SET_PROJECT",
+      payload: { projectUrl: url, projectTitle: title },
+    });
+  }
+
   return (
-    <div className="project-item">
+    <div className="project-item" onClick={handleProjectPreviewChange}>
       <div className="project-img relative self-center w-24 h-24">
         <Image className="project-img" src={image} alt={""} fill={true} />
       </div>

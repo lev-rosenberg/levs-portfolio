@@ -4,14 +4,22 @@ import React, { createContext, useReducer, type Dispatch } from "react";
 
 type InitialStateProps = {
   fontSize: number;
+  project: {
+    projectUrl: string;
+    projectTitle: string;
+  };
 };
-const initialState = { fontSize: 16 };
+const initialState = {
+  fontSize: 16,
+  project: { projectUrl: "", projectTitle: "" },
+};
 
 const reducer = (state: InitialStateProps, action: any) => {
   switch (action.type) {
     case "SET_FONT_SIZE":
-      console.log("New font size:", action.payload);
       return { ...state, fontSize: action.payload };
+    case "SET_PROJECT":
+      return { ...state, project: action.payload };
     default:
       return state;
   }

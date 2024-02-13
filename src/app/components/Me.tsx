@@ -1,8 +1,13 @@
 import Image from "next/image";
+import { useContext } from "react";
+import { Context } from "../context";
 
 export default function Me() {
+  const { state } = useContext(Context);
+  const visible = state.project.projectUrl !== "" ? "hidden" : "visible";
+
   return (
-    <div className="silouette">
+    <div className={`silouette ${visible}`}>
       <Image
         src="/images/silouetteWithLabels.png"
         alt="Picture of the author"

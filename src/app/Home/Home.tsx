@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useContext } from "react";
 import { Context } from "../context";
+import TypedText from "../components/TypedText";
 
 export default function Home() {
   const { state } = useContext(Context);
@@ -12,7 +13,10 @@ export default function Home() {
       style={{ fontSize: `${state.fontSize}px` }}
     >
       <h1>
-        Hey! I&apos;m <strong>Lev Rosenberg</strong>
+        Hey! I&apos;m{" "}
+        <strong>
+          <TypedText string="Lev Rosenberg." typeSpeed={100}></TypedText>
+        </strong>
       </h1>
       <div className="left-border">
         <p>
@@ -34,7 +38,7 @@ export default function Home() {
         <p>
           Check out what I&apos;ve been working on{" "}
           <Link href="/Projects">
-            <button>here</button>
+            <button className="mt-0">here</button>
           </Link>
         </p>
       </div>

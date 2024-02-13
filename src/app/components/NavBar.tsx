@@ -2,9 +2,19 @@
 import Link from "next/link";
 
 import { usePathname } from "next/navigation";
+import { useEffect, useContext } from "react";
+import { Context } from "../context";
 
 export default function NavBar() {
   const pathname = usePathname();
+  const { state, dispatch } = useContext(Context);
+
+  useEffect(() => {
+    dispatch({
+      type: "SET_PROJECT",
+      payload: { projectUrl: "", projectTitle: "" },
+    });
+  }, [dispatch, pathname]);
 
   return (
     <nav>
@@ -25,6 +35,14 @@ export default function NavBar() {
             href="/Projects"
           >
             Projects
+          </Link>
+        </li>
+        <li className="only-desktop">
+          <Link
+            className={`p-underline ${pathname === "/Resume" ? "active" : ""}`}
+            href="/Resume"
+          >
+            Resume
           </Link>
         </li>
         <li>

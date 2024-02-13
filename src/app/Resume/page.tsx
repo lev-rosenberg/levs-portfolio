@@ -1,7 +1,7 @@
-import Home from "./Home/Home";
+import GeneralLayout from "../components/GeneralLayout";
+import Resume from "./Resume";
 import { Metadata } from "next";
-import { FormspreeProvider } from "@formspree/react";
-import GeneralLayout from "./components/GeneralLayout";
+
 export const metadata: Metadata = {
   title: "Lev Rosenberg's Portfolio",
 };
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Main() {
   return (
     <GeneralLayout>
-      <Home />
+      <Resume />
     </GeneralLayout>
   );
 }
