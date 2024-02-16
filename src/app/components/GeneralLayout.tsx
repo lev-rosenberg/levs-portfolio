@@ -13,7 +13,7 @@ export default function GeneralLayout({ children }: LayoutProps) {
     <div className="layout">
       <Head />
       <Me />
-      <main className="overflow-clip h-full">{children}</main>
+      <main className="overflow-clip h-screen">{children}</main>
       <Foot />
     </div>
   );
