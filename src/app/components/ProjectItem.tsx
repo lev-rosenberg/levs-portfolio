@@ -13,6 +13,7 @@ type ProjectItemProps = {
   spotify?: string;
   youtube?: string;
   pdf?: string;
+  notViewable?: boolean;
 };
 
 export default function ProjectItem({
@@ -24,12 +25,12 @@ export default function ProjectItem({
   spotify,
   youtube,
   pdf,
+  notViewable,
 }: ProjectItemProps) {
   const { dispatch } = useContext(Context);
 
   function handleProjectPreviewChange() {
-    const url = link ? link : pdf ? pdf : "";
-    console.log("url", url);
+    const url = notViewable ? "" : link ? link : pdf ? pdf : "";
     dispatch({
       type: "SET_PROJECT",
       payload: { projectUrl: url, projectTitle: title },

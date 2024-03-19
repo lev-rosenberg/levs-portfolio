@@ -12,17 +12,16 @@ export default function WebsitePreview() {
     setDescription(state.project.projectTitle);
   }, [state.project]);
 
-  const display = url == "" ? "none" : "";
-
   function handleExitProject() {
     dispatch({
       type: "SET_PROJECT",
-      payload: { projectUrl: "", projectTitle: "" },
+      payload: { projectUrl: null, projectTitle: null },
     });
   }
+  const display = url == null ? "none" : "";
 
   return (
-    <div className="right-page" style={{ display: `${display}` }}>
+    <div className="right-page" style={{ display: display }}>
       <button
         className="self-end w-fit rounded-full mb-1"
         onClick={handleExitProject}
@@ -30,8 +29,21 @@ export default function WebsitePreview() {
         <FontAwesomeIcon icon={faXmark} />
       </button>
       <div className="iframe-outer">
-        <div className="iframe-inner">
-          <iframe id="preview-iframe" src={url} title={description}></iframe>
+        <div className="iframe-inner flex">
+          {url === "" ? (
+            <div className="self-center m-10 text-center w-full">
+              <h2 className="text-4xl mb-5">
+                Oh no! There is no preview available for this project.
+              </h2>
+              <p className="text-2xl">
+                This could be due to authentication barriers, or maybe I just
+                haven&apos;t updated the link yet. Please open the project in a
+                different tab to view it by clicking one of the icons.
+              </p>
+            </div>
+          ) : (
+            <iframe id="preview-iframe" src={url} title={description}></iframe>
+          )}
         </div>
       </div>
     </div>

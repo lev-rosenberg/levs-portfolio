@@ -5,7 +5,6 @@ import ProjectItem from "../components/ProjectItem";
 import WebsitePreview from "../components/WebsitePreview";
 export default function Projects() {
   const [activeProjectType, setActiveProjectType] = useState("Software");
-  const [selectedProject, setSelectedProject] = useState(null); // TODO: Implement the iframe using the selectedProject state
 
   const projectTypes = ["Software", "Ceramics", "Music"];
   const { state } = useContext(Context);
@@ -40,13 +39,6 @@ export default function Projects() {
           {activeProjectType === "Software" ? (
             <>
               <ProjectItem
-                title="Maddox Image Annotator"
-                description="This is a bare-bones demo of different frameworks for image annotatition that I developed for Maddox AI last summer."
-                image="/images/maddox-logo.webp"
-                link="https://imageannotator.netlify.app/"
-                skills={["React", "Typescript", "Next", "Konva", "D3", "visx"]}
-              />
-              <ProjectItem
                 title="Adamah Ceramics"
                 description={
                   "This is my ceramics portfolio! In addition to my love of tech, i'm a semi-professional potter and I love to make functional ceramics."
@@ -56,10 +48,18 @@ export default function Projects() {
                 skills={["React.js", "Next"]}
               />
               <ProjectItem
+                title="Maddox Image Annotator"
+                description="This is a bare-bones demo of different frameworks for image annotatition that I developed for Maddox AI last summer."
+                image="/images/maddox-logo.webp"
+                link="https://imageannotator.netlify.app/"
+                skills={["React", "Typescript", "Next", "Konva", "D3", "visx"]}
+              />
+              <ProjectItem
                 title="Tetris"
                 description="This is a fully functional Tetris clone I built using C++."
                 image="/images/tetris.png"
                 link="https://github.com/lev-rosenberg/Tetrix"
+                notViewable={true}
                 skills={["C++", "OOP"]}
               />
               <ProjectItem
@@ -114,6 +114,7 @@ export default function Projects() {
                 youtube="https://www.youtube.com/watch?v=Ll2AHvU0jYk"
                 spotify="https://open.spotify.com/track/7lVUhyhkeprWlAk8J6dtgK?si=a674186a02144b5d"
                 skills={["Key: F", "SSATBB", "$40"]}
+                pdf="/arr/from_fire.pdf"
               />
               <ProjectItem
                 title="Jealous - Labrinth"
@@ -121,6 +122,7 @@ export default function Projects() {
                 image="/images/skyfall.png"
                 youtube="https://www.youtube.com/watch?v=rmHXZfTbS1g"
                 skills={["Key: Db", "SSATBB", "$25"]}
+                pdf="/arr/jealous.pdf"
               />
               <ProjectItem
                 title="Forbidden Fruit - Bella Coppola"
@@ -128,6 +130,7 @@ export default function Projects() {
                 image="/images/skyfall.png"
                 youtube="https://www.youtube.com/watch?v=hPMFT53sJ5o"
                 skills={["Key: Db", "SSATBB", "$25"]}
+                pdf="/arr/forbidden_fruit.pdf"
               />
               <ProjectItem
                 title="All For Us - Labrinth"
@@ -135,6 +138,7 @@ export default function Projects() {
                 image="/images/all_for_us.png"
                 youtube="https://www.youtube.com/watch?v=ElP40adun7Q"
                 skills={["Key: Bb", "SSATBB", "$30"]}
+                pdf="/arr/all_for_us.pdf"
               />
               <ProjectItem
                 title="Before I Knew You - Erez Zobary"
@@ -142,6 +146,7 @@ export default function Projects() {
                 image="/images/skyfall.png"
                 youtube="https://www.youtube.com/watch?v=H-Abz-Xp_cs&list=PL_SyT0gMIumA4huvVxurkFkrt-lCSGzl7&index=3"
                 skills={["Key: Db", "SSATBB", "$25"]}
+                pdf="/arr/before_i_knew_you.pdf"
               />
               <ProjectItem
                 title="Skyfall - Adele"
@@ -149,6 +154,7 @@ export default function Projects() {
                 image="/images/skyfall.png"
                 youtube="https://www.youtube.com/watch?v=xhMOcBAbqdw"
                 skills={["Key: Eb", "SSATBB", "$15"]}
+                pdf="/arr/skyfall.pdf"
               />
               <ProjectItem
                 title="Daniel Caesar Medley"
@@ -156,6 +162,7 @@ export default function Projects() {
                 image="/images/daniel_caesar.png"
                 youtube="https://www.youtube.com/watch?v=H-Abz-Xp_cs&list=PL_SyT0gMIumA4huvVxurkFkrt-lCSGzl7&index=3"
                 skills={["Key: Db", "SSATBB", "$15"]}
+                pdf="/arr/daniel_caesar_medley.pdf"
               />
             </>
           )}

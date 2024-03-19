@@ -12,7 +12,7 @@ export default function NavBar() {
   useEffect(() => {
     dispatch({
       type: "SET_PROJECT",
-      payload: { projectUrl: "", projectTitle: "" },
+      payload: { projectUrl: null, projectTitle: null },
     });
   }, [dispatch, pathname]);
 

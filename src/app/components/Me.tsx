@@ -4,7 +4,7 @@ import { Context } from "../context";
 
 export default function Me() {
   const { state } = useContext(Context);
-  const visible = state.project.projectUrl !== "" ? "hidden" : "visible";
+  const visible = state.project.projectUrl !== null ? "hidden" : "visible";
 
   return (
     <div className={`silouette ${visible}`}>
