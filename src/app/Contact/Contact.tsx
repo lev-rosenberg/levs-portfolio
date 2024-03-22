@@ -10,18 +10,15 @@ export default function Contact() {
       style={{ fontSize: `${state.fontSize}px` }}
     >
       <h1>
-        <strong className="text-5xl">Contact Me</strong>
+        <strong className="text-5xl">Let&apos;s chat!</strong>
       </h1>
-      <div className="center-text">
+      <div className="bottom-border">
         <p>
-          Interested in my work? Message me here! I&apos;ll get back to you
-          ASAP.
-        </p>
-        <br />
-        <p className="font-bold">
-          I&apos;m currently looking for full time SWE roles starting in
-          September 2024. If you think I&apos;d be a good fit for your company,
-          please reach out!
+          Interested in working with me? Reach out at{" "}
+          <a href="mailto:lev.rosenberg@gmail.com" className="underline">
+            lev.rosenberg@gmail.com
+          </a>{" "}
+          or through the form below. I&apos;ll get back to you ASAP.
         </p>
       </div>
       <ContactForm />

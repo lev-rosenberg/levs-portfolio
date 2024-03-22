@@ -48,6 +48,14 @@ export default function Projects() {
                 skills={["React.js", "Next"]}
               />
               <ProjectItem
+                title="Split Pay"
+                description="This is a full stack mobile web-app I developed for a class project. It makes it easy to split bills with your friends and keep track of who owes who."
+                link="https://github.com/lev-rosenberg/split-pay-app"
+                image="/images/split_bill.webp"
+                notViewable
+                skills={["React.js", "Express.js", "Postgres", "Web-Sockets"]}
+              />
+              <ProjectItem
                 title="Maddox Image Annotator"
                 description="This is a bare-bones demo of different frameworks for image annotatition that I developed for Maddox AI last summer."
                 image="/images/maddox-logo.webp"
