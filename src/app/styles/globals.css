@@ -154,8 +154,8 @@ iframe {
 }
 
 main {
-  padding: 2.5rem;
-  height: 100vh;
+  padding-top: 1.5rem;
+  height: 100%;
   overflow: clip;
 }
 
@@ -166,10 +166,6 @@ main {
   main {
     padding: 3rem 1rem 0rem 1rem;
     overflow: scroll;
-    height: 100%;
-  }
-  .layout {
-    height: 100%;
   }
 }
 
@@ -223,7 +219,7 @@ main {
 .layout {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100dvh;
   justify-content: space-between;
   padding: 0.5rem 0.25rem;
 }
