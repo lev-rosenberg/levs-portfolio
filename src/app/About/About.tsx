@@ -1,34 +1,9 @@
 "use client";
 import React, { useContext } from "react";
-import Skills from "../components/Skills";
 import { Context } from "../context";
 
 export default function About() {
   const { state } = useContext(Context);
-  const languages = ["JavaScript", "TypeScript", "Python", "C", "C++"];
-  const frontend = [
-    "React",
-    "Next",
-    "Redux",
-    "CSS",
-    "Tailwind",
-    "Figma",
-    "MUI",
-    "D3",
-    "Konva",
-    "visx",
-  ];
-  const backend = [
-    "Node",
-    "Express",
-    "Django",
-    "Firestore",
-    "PostgreSQL",
-    "Firebase",
-    "GraphQL",
-    "REST",
-    "WebSockets",
-  ];
   return (
     <div
       className="left-page top-page"
@@ -88,15 +63,6 @@ export default function About() {
           it my own.
         </p>
       </div>
-      {/* <h2>My tech stack</h2>
-      <div className="technical-skills left-border">
-        <p>Programming Languages: </p>
-        <Skills skillList={languages} />
-        <p>Frontend tools: </p>
-        <Skills skillList={frontend} />
-        <p>Backend tools: </p>
-        <Skills skillList={backend} />
-      </div> */}
     </div>
   );
 }

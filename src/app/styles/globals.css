@@ -143,6 +143,8 @@ iframe {
 
 main {
   padding: 2.5rem;
+  height: 100vh;
+  overflow: clip;
 }
 
 @media screen and (max-width: 768px) {
@@ -150,7 +152,9 @@ main {
     background: radial-gradient(ellipse at 35% 50%, rgb(var(--bg-bw-rgb)), rgb(var(--bg-purple-rgb)));
   }
   main {
-    padding: 2.5rem 1rem 0rem 1rem
+    padding: 2.5rem 1rem 0rem 1rem;
+    overflow: scroll;
+    height: 100%;
   }
 }
 
