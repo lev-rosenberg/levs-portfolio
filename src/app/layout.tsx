@@ -10,7 +10,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ContextProvider>{children}</ContextProvider>
+        <div className="full-screen-mobile">
+          <ContextProvider>{children}</ContextProvider>
+        </div>
       </body>
     </html>
   );
