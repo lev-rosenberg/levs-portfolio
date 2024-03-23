@@ -49,9 +49,10 @@ export default function About() {
         <br />
         <p>
           Most of all, I am a <strong>lover of learning</strong>. A double major
-          in comp sci and cognitive science, I Whether that be CS, Linguistics,
-          Neuroscience, Politcs, History, Cooking, Politics, or really anything
-          you throw at me!
+          in computer science and cognitive science, I refuse to limit the
+          breadth of my interests––whether that be CS, linguistics,
+          neuroscience, politcs, history, cooking, art, music, or really
+          anything you throw at me!
         </p>
         <br />
         <p>

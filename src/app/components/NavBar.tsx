@@ -66,8 +66,8 @@ export default function NavBar() {
             </Link>
           ) : (
             <a
-              href="/portfolio_resume.pdf"
-              download="LevsPortfolio"
+              href="/Lev_Rosenberg_Resume.pdf"
+              download="Lev_Rosenberg_Resume"
               target="_blank"
             >
               Resume
