@@ -11,8 +11,11 @@ export default function FontControl() {
     setFontSize((prevFontSize) => {
       const newFontSize =
         largerOrSmaller === "-" ? prevFontSize - 2 : prevFontSize + 2;
-      dispatch({ type: "SET_FONT_SIZE", payload: newFontSize });
-      return newFontSize;
+      if (newFontSize > 12 && newFontSize < 24) {
+        dispatch({ type: "SET_FONT_SIZE", payload: newFontSize });
+        return newFontSize;
+      }
+      return prevFontSize;
     });
   }
 
