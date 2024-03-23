@@ -355,7 +355,7 @@ main {
   .contact-form {
     width: 100%;
   }
-/*   
+  
   .theme-toggle {
     position: absolute;
     bottom: 0;
@@ -368,14 +368,14 @@ main {
     bottom: 0;
     left: 0;
     margin: 0.5rem;
-  } */
-
+  }
+/* 
   .theme-toggle {
     display: none;
   }
   .font-control {
     display: none;
-  }
+  } */
   .font-control p {
     display: none;
   }
