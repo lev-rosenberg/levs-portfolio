@@ -168,6 +168,9 @@ main {
     overflow: scroll;
     height: 100%;
   }
+  .layout {
+    height: 100%;
+  }
 }
 
 /* Page Styles */
