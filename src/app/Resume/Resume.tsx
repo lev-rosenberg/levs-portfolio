@@ -12,7 +12,7 @@ export default function Contact() {
         <strong>Resume</strong>
       </h1>
       {/* <div className="iframe-container"> */}
-      <embed className="w-full h-full" src="/portfolio_resume.pdf"></embed>
+      <embed className="w-full h-full" src="/Lev_Rosenberg_Resume.pdf"></embed>
       {/* </div> */}
     </div>
   );

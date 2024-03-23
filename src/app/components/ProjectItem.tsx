@@ -4,6 +4,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faSpotify, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { Context } from "../context";
 import { useContext } from "react";
+import Skills from "./Skills";
 type ProjectItemProps = {
   title: string;
   description: string;
@@ -66,13 +67,7 @@ export default function ProjectItem({
           </div>
           <p>{description}</p>
         </div>
-        <div className="flex pt-5 flex-wrap">
-          {skills.map((skill, i) => (
-            <p className="skill" key={i}>
-              {skill}
-            </p>
-          ))}
-        </div>
+        <Skills skillList={skills} classes="pt-5" />
       </div>
     </div>
   );

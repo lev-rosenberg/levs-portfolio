@@ -5,10 +5,7 @@ import { Context } from "../context";
 export default function Contact() {
   const { state } = useContext(Context);
   return (
-    <div
-      className="flex flex-col text-center items-center pb-3 h-full w-full overflow-y-scroll"
-      style={{ fontSize: `${state.fontSize}px` }}
-    >
+    <div className="contact-page" style={{ fontSize: `${state.fontSize}px` }}>
       <h1>
         <strong className="text-5xl">Let&apos;s chat!</strong>
       </h1>
