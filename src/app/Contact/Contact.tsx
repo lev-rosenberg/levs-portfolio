@@ -14,8 +14,12 @@ export default function Contact() {
           Interested in working with me? Reach out at{" "}
           <a href="mailto:lev.rosenberg@gmail.com" className="underline">
             lev.rosenberg@gmail.com
-          </a>{" "}
-          or through the form below. I&apos;ll get back to you ASAP.
+          </a>
+          ,{" "}
+          <a href="tel:781-898-5553" className="underline">
+            781-898-5553
+          </a>
+          , or through the form below. I&apos;ll get back to you ASAP.
         </p>
       </div>
       <ContactForm />

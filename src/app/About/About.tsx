@@ -12,7 +12,7 @@ export default function About() {
       <h1>
         <strong className="text-5xl">About Me</strong>
       </h1>
-      <h2>Lev the engineer</h2>
+      <h2>Lev the Engineer</h2>
       <div className="left-border">
         <p>
           I am a software engineer who enjoys <strong>wearing many hats</strong>
@@ -36,10 +36,18 @@ export default function About() {
             looking for full time full stack and/or frontend roles
           </strong>{" "}
           starting in September 2024. If you think I&apos;d be a good fit for
-          your company, please reach out!
+          your company, please reach out at{" "}
+          <a href="mailto:lev.rosenberg@gmail.com" className="underline">
+            lev.rosenberg@gmail.com
+          </a>{" "}
+          or{" "}
+          <a href="tel:781-898-5553" className="underline">
+            781-898-5553
+          </a>
+          !
         </p>
       </div>
-      <h2>Lev the artist</h2>
+      <h2>Lev the Artist</h2>
       <div className="left-border">
         <p>
           I love building things off the computer. To that end I run my own
