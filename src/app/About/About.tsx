@@ -59,7 +59,7 @@ export default function About() {
         </p>
         <br />
         <p>
-          Over the past 8 years of arranging vocal music, I&apos; learned to
+          Over the past 8 years of arranging vocal music, I&apos;ve learned to
           make each arrangement subvert expectations and bring a new perspective
           to popular music. I love the challenge of taking a song everyone knows
           and figuring out how to make it my own.
