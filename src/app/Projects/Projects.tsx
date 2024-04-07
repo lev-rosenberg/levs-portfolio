@@ -39,13 +39,18 @@ export default function Projects() {
           {activeProjectType === "Software" ? (
             <>
               <ProjectItem
-                title="Adamah Ceramics"
-                description={
-                  "This is my ceramics portfolio! In addition to my love of tech, i'm a semi-professional potter and I love to make functional ceramics."
-                }
-                image="/images/adamah.jpeg"
-                link="https://adamah-portfolio.vercel.app/"
-                skills={["React.js", "Next"]}
+                title="Angel Shot"
+                description="My hackathon team and I developed this web-app to help people feel safe in uncomfortable situations by initiating a real time 'call' with an AI."
+                link="https://angel-shot.netlify.app/"
+                image="/images/angel-shot.png"
+                skills={[
+                  "React",
+                  "AWS Transcribe",
+                  "Mantine",
+                  "OpenAI",
+                  "Vite",
+                  "MediaStream API",
+                ]}
               />
               <ProjectItem
                 title="Split Pay"
@@ -53,7 +58,16 @@ export default function Projects() {
                 link="https://github.com/lev-rosenberg/split-pay-app"
                 image="/images/split_bill.webp"
                 notViewable
-                skills={["React.js", "Express.js", "Postgres", "Web-Sockets"]}
+                skills={["React", "Express.js", "PostgreSQL", "Web-Sockets"]}
+              />
+              <ProjectItem
+                title="Adamah Ceramics"
+                description={
+                  "This is my ceramics portfolio! In addition to my love of tech, i'm a semi-professional potter and I love to make functional ceramics."
+                }
+                image="/images/adamah.jpeg"
+                link="https://adamah-portfolio.vercel.app/"
+                skills={["React", "Next"]}
               />
               <ProjectItem
                 title="Maddox Image Annotator"
@@ -101,7 +115,7 @@ export default function Projects() {
                 }
                 image="/images/adamah.jpeg"
                 link="https://adamah-portfolio.vercel.app/"
-                skills={["React.js", "Next"]}
+                skills={["React", "Next"]}
               />
             </>
           ) : (
