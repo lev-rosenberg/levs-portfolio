@@ -22,25 +22,34 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
           className="flex flex-col gap-3 w-full"
         >
-          <label htmlFor="email">Email Address</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="example@gmail.com"
-          />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Let me know what you're looking for!"
-          />
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
-          />
+          <div className="form-section">
+            <label htmlFor="email">Email Address</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="example@gmail.com"
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+          </div>
+          <div className="form-section">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Let me know what you're looking for!"
+            />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+          </div>
+
           <button type="submit" disabled={state.submitting}>
             Submit
           </button>

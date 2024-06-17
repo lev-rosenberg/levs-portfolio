@@ -39,13 +39,26 @@ export default function Projects() {
           {activeProjectType === "Software" ? (
             <>
               <ProjectItem
+                title="Carbon Footprint Tracker"
+                description="This is a cloud-based web-app that I developed to help myself track my carbon footprint and learn about the environmental impact of my daily choices."
+                link="https://carbontracker.vercel.app/"
+                image="/images/footprint.png"
+                skills={[
+                  "React",
+                  "Next",
+                  "AWS Lambda",
+                  "AWS RDS",
+                  "ClimatIQ API",
+                ]}
+              />
+              <ProjectItem
                 title="Angel Shot"
                 description="My hackathon team and I developed this web-app to help people feel safe in uncomfortable situations by initiating a real time 'call' with an AI."
                 link="https://angel-shot.netlify.app/"
                 image="/images/angel-shot.png"
                 skills={[
                   "React",
-                  "AWS Transcribe",
+                  "Amazon Transcribe",
                   "Mantine",
                   "OpenAI",
                   "Vite",

@@ -323,6 +323,18 @@ main {
   height: fit-content;
 }
 
+.contact-form .form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  align-self: flex-start;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
 
 .iframe-outer {
   padding-top: 50%;
@@ -353,7 +365,8 @@ main {
     display: none;
   }
   .contact-form {
-    width: 100%;
+    width: 99%;
+    margin: auto;
   }
   
   .theme-toggle {
@@ -421,6 +434,9 @@ main {
     display: none;
   }
   .center-text {
+    width: 100%;
+  }
+  .bottom-border {
     width: 100%;
   }
 }
