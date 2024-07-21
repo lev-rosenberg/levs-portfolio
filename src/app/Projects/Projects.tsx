@@ -90,6 +90,13 @@ export default function Projects() {
                 skills={["React", "Typescript", "Next", "Konva", "D3", "visx"]}
               />
               <ProjectItem
+                title="Design Your Delta"
+                link="https://delta-lab-8ec06.firebaseapp.com/"
+                description="This was a commission from a law-professor at NU. It's a web-app specifically crafted for law students, helping them pinpoint areas for academic and professional development!"
+                skills={["React", "D3", "Firebase"]}
+                image="/images/design_your_delta.webp"
+              />
+              <ProjectItem
                 title="Tetris"
                 description="This is a fully functional Tetris clone I built using C++."
                 image="/images/tetris.png"
@@ -111,13 +118,6 @@ export default function Projects() {
                 skills={["React", "Firebase"]}
                 image="/images/nuart.webp"
               />
-              <ProjectItem
-                title="Design Your Delta"
-                link="https://delta-lab-8ec06.firebaseapp.com/"
-                description="This was a commission from a law-professor at NU. It's a web-app specifically crafted for law students, helping them pinpoint areas for academic and professional development!"
-                skills={["React", "D3", "Firebase"]}
-                image="/images/design_your_delta.webp"
-              />
             </>
           ) : activeProjectType === "Ceramics" ? (
             <>
@@ -135,7 +135,7 @@ export default function Projects() {
             <>
               <ProjectItem
                 title="Set Fire to the Rain - Adele"
-                description="Contact me if you're interested in purchasing the sheet music!"
+                description=""
                 image="/images/set_fire.png"
                 youtube="https://www.youtube.com/watch?v=XXo61gB8exc"
                 spotify="https://open.spotify.com/track/78PwFGa5ebybvV0t0UKWLG?si=6bcd714d981b4689"
@@ -144,7 +144,7 @@ export default function Projects() {
               />
               <ProjectItem
                 title="From Fire - Perta"
-                description="Contact me if you're interested in purchasing the sheet music!"
+                description=""
                 image="/images/set_fire.png"
                 youtube="https://www.youtube.com/watch?v=Ll2AHvU0jYk"
                 spotify="https://open.spotify.com/track/7lVUhyhkeprWlAk8J6dtgK?si=a674186a02144b5d"
@@ -153,7 +153,7 @@ export default function Projects() {
               />
               <ProjectItem
                 title="Jealous - Labrinth"
-                description="Contact me if you're interested in purchasing the sheet music!"
+                description=""
                 image="/images/skyfall.png"
                 youtube="https://www.youtube.com/watch?v=rmHXZfTbS1g"
                 skills={["Key: Db", "SSATBB", "$25"]}
@@ -161,7 +161,7 @@ export default function Projects() {
               />
               <ProjectItem
                 title="Forbidden Fruit - Bella Coppola"
-                description="Contact me if you're interested in purchasing the sheet music!"
+                description=""
                 image="/images/skyfall.png"
                 youtube="https://www.youtube.com/watch?v=hPMFT53sJ5o"
                 skills={["Key: Db", "SSATBB", "$25"]}
@@ -169,7 +169,7 @@ export default function Projects() {
               />
               <ProjectItem
                 title="All For Us - Labrinth"
-                description="Contact me if you're interested in purchasing the sheet music!"
+                description=""
                 image="/images/all_for_us.png"
                 youtube="https://www.youtube.com/watch?v=ElP40adun7Q"
                 skills={["Key: Bb", "SSATBB", "$30"]}
@@ -177,7 +177,7 @@ export default function Projects() {
               />
               <ProjectItem
                 title="Before I Knew You - Erez Zobary"
-                description="Contact me if you're interested in purchasing the sheet music!"
+                description=""
                 image="/images/skyfall.png"
                 youtube="https://www.youtube.com/watch?v=H-Abz-Xp_cs&list=PL_SyT0gMIumA4huvVxurkFkrt-lCSGzl7&index=3"
                 skills={["Key: Db", "SSATBB", "$25"]}
@@ -185,7 +185,7 @@ export default function Projects() {
               />
               <ProjectItem
                 title="Skyfall - Adele"
-                description="Contact me if you're interested in purchasing the sheet music!"
+                description=""
                 image="/images/skyfall.png"
                 youtube="https://www.youtube.com/watch?v=xhMOcBAbqdw"
                 skills={["Key: Eb", "SSATBB", "$15"]}
@@ -193,7 +193,7 @@ export default function Projects() {
               />
               <ProjectItem
                 title="Daniel Caesar Medley"
-                description="A combination of Blessed, Get You, Best Part, and Hold me Down. Contact me if you're interested in purchasing the sheet music!"
+                description="A combination of Blessed, Get You, Best Part, and Hold me Down"
                 image="/images/daniel_caesar.png"
                 youtube="https://www.youtube.com/watch?v=H-Abz-Xp_cs&list=PL_SyT0gMIumA4huvVxurkFkrt-lCSGzl7&index=3"
                 skills={["Key: Db", "SSATBB", "$15"]}

@@ -20,21 +20,18 @@ export default function Home() {
       </h1>
       <div className="left-border">
         <p>
-          I’m a fourth year at Northwestern studying comp sci & cog sci who
-          wants to apply my technical skills towards mission-driven roles.
+          I love building––be it developing software, throwing pottery,
+          arranging music, lots. I'm an experienced full stack engineer, and I
+          want to apply my technical skills towards mission-driven software
+          roles.
         </p>
         <br />
         <p>
           I also run a ceramics business and arrange professional A Capella
-          music!
+          music on the side. I love to learn and create, and I'm always looking
+          for new opportunities to do so.
         </p>
         <br />
-        {/* <p>
-            I’m currently looking for a full time software engineering role
-            starting in September 2024. If you think I&apos;d be a good fit for
-            your company, please reach out!
-          </p> */}
-        {/* <br /> */}
         <p>
           Check out what I&apos;ve been working on{" "}
           <Link href="/Projects">
