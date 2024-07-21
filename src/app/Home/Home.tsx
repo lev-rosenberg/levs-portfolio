@@ -21,15 +21,14 @@ export default function Home() {
       <div className="left-border">
         <p>
           I love building––be it developing software, throwing pottery,
-          arranging music, lots. I'm an experienced full stack engineer, and I
-          want to apply my technical skills towards mission-driven software
-          roles.
+          arranging music, lots. I&apos;m an experienced full stack engineer,
+          and I want to apply my technical skills towards mission-driven
+          software roles.
         </p>
         <br />
         <p>
           I also run a ceramics business and arrange professional A Capella
-          music on the side. I love to learn and create, and I'm always looking
-          for new opportunities to do so.
+          music on the side.
         </p>
         <br />
         <p>
