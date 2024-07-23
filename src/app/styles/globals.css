@@ -231,9 +231,11 @@ main {
     justify-content: flex-start;
   }
 
-  /* .left-page.top-page {
-    padding-top: 0;
-  } */
+  .left-page.center-page {
+    justify-content: flex-start;
+    padding-top: 2rem;
+
+  }
 
   .right-page {
     display: none;
@@ -382,13 +384,6 @@ main {
     left: 0;
     margin: 0.5rem;
   }
-/* 
-  .theme-toggle {
-    display: none;
-  }
-  .font-control {
-    display: none;
-  } */
   .font-control p {
     display: none;
   }
