@@ -20,22 +20,27 @@ export default function Home() {
       </h1>
       <div className="left-border">
         <p>
-          I love building––be it developing software, throwing pottery,
-          arranging music, lots. I&apos;m an experienced full stack engineer,
-          and I want to apply my technical skills towards mission-driven
-          software roles.
+          I&apos;m an experienced full stack engineer who loves creating––be it
+          developing software, throwing pottery, arranging music, or whipping up
+          the best grilled cheese (ask me abt my recipe).
         </p>
         <br />
         <p>
-          I also run a ceramics business and arrange professional A Capella
-          music on the side.
-        </p>
-        <br />
-        <p>
-          Check out what I&apos;ve been working on{" "}
+          I also run a small ceramics business. And I arrange professional A
+          Capella music on the side. Check out everything I&apos;ve been working
+          on{" "}
           <Link href="/Projects">
             <button className="mt-0">here</button>
           </Link>
+        </p>
+        <br />
+        <p>
+          I&apos;m currently on the hunt for SWE roles where I can apply my
+          technical skills towards building mission-driven software. Please{" "}
+          <Link href="/Contact">
+            <button className="mt-0">reach out</button>
+          </Link>{" "}
+          if you think I&apos;d be a good fit for your team.
         </p>
       </div>
     </div>
