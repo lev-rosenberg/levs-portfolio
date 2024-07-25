@@ -9,7 +9,7 @@ export default function Me() {
   return (
     <div className={`silouette ${visible}`}>
       <Image
-        src="/images/SilouetteLabeled.png"
+        src="/images/labeledSilouette.png"
         alt="Picture of the author"
         fill={true}
         sizes="(max-width: 768px) 50vw"
