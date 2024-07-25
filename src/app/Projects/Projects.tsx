@@ -82,13 +82,13 @@ export default function Projects() {
                 link="https://adamah-portfolio.vercel.app/"
                 skills={["React", "Next"]}
               />
-              <ProjectItem
+              {/* <ProjectItem
                 title="Maddox Image Annotator"
                 description="This is a bare-bones demo of different frameworks for image annotatition that I developed for Maddox AI last summer."
                 image="/images/maddox-logo.webp"
                 link="https://imageannotator.netlify.app/"
                 skills={["React", "Typescript", "Next", "Konva", "D3", "visx"]}
-              />
+              /> */}
               <ProjectItem
                 title="Design Your Delta"
                 link="https://delta-lab-8ec06.firebaseapp.com/"
