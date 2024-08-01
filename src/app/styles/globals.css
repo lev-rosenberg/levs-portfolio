@@ -417,6 +417,7 @@ main {
   padding-bottom: 0.2rem;
   border-bottom: 2px solid transparent;
   cursor: pointer;
+  text-wrap: nowrap;
 }
 .p-underline:hover {
   color: rgb(var(--txt-purple-rgb));

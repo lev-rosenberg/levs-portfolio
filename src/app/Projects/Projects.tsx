@@ -6,7 +6,7 @@ import WebsitePreview from "../components/WebsitePreview";
 export default function Projects() {
   const [activeProjectType, setActiveProjectType] = useState("Software");
 
-  const projectTypes = ["Software", "Ceramics", "Music"];
+  const projectTypes = ["Software", "Music", "Ceramics", "UX Research"];
   const { state } = useContext(Context);
 
   return (
@@ -20,7 +20,7 @@ export default function Projects() {
             <strong className="text-5xl">My Work</strong>
           </h1>
           <div className="left-border">
-            <div className="flex gap-3">
+            <div className="flex gap-3 overflow-scroll">
               {projectTypes.map((projectType, i) => (
                 <h2
                   key={i}
@@ -131,7 +131,7 @@ export default function Projects() {
                 skills={["React", "Next"]}
               />
             </>
-          ) : (
+          ) : activeProjectType === "Music" ? (
             <>
               <ProjectItem
                 title="Set Fire to the Rain - Adele"
@@ -198,6 +198,27 @@ export default function Projects() {
                 youtube="https://www.youtube.com/watch?v=H-Abz-Xp_cs&list=PL_SyT0gMIumA4huvVxurkFkrt-lCSGzl7&index=3"
                 skills={["Key: Db", "SSATBB", "$15"]}
                 pdf="/arr/daniel_caesar_medley.pdf"
+              />
+            </>
+          ) : (
+            <>
+              <ProjectItem
+                title="Knowledge Maps"
+                description="Developed during my time in Delta Lab's DTR, this project introduces a UX-driven tool to enhance CSS learning. Based on HCI research, the tool guides beginner-intermediate developers through structured analysis of professional websites to build expert-level intuition."
+                image="/images/delta.png"
+                skills={["User Testing", "HCI Research", "Agile Methodology"]}
+                pdf="/writeups/km_writeup.pdf"
+              />
+              <ProjectItem
+                title="TunePad Research Study"
+                description="This project applies Contextual Design principles to optimize TunePad, a dual-purpose platform for music and coding education. Through UX research and user interviews, it explores how to enhance the tool's effectiveness for both novice programmers and musicians, proposing test-driven design improvements. Created during an independant study at NU."
+                image="https://tunepad.com/assets/images/landing/logo-blue.svg"
+                skills={[
+                  "Contextual Design",
+                  "UX Research",
+                  "User-Centered Design",
+                ]}
+                pdf="/writeups/tunepad_ux_research.pdf"
               />
             </>
           )}
