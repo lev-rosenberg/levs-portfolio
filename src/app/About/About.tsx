@@ -10,15 +10,18 @@ export default function About() {
       style={{ fontSize: `${state.fontSize}px` }}
     >
       <h1>
-        <strong className="text-5xl">About Me</strong>
+        <strong className="text-5xl grey">About Me</strong>
       </h1>
-      <h2>Lev the Engineer</h2>
+      <h2 className="pb-1">Lev the Engineer</h2>
       <div className="left-border">
         <p>
-          I am a software engineer who enjoys wearing many hats . I relish in
-          the creativity and design that comes with frontend development, the
-          systems thinking required of backend work, and the balance of
-          technical expertise and user empathy found on the product side.
+          As a SWE, I like to wear many hats. I got my professional start on the
+          frontend, and I relish in the creativity and design that comes with
+          working on . At the same time, I love shifting into the
+          systems-thinking mindset that&apos;s required of backend development.
+          And I think the balance of technical and socio-emotional challenges
+          (think user empathy) found on the product side excites the full range
+          of my interests.
         </p>
         <br />
         <p>
@@ -35,19 +38,19 @@ export default function About() {
           <a href="mailto:lev.rosenberg@gmail.com" className="underline">
             lev.rosenberg@gmail.com
           </a>{" "}
-          or{" "}
+          or even better text/call me at{" "}
           <a href="tel:781-898-5553" className="underline">
             781-898-5553
           </a>
-          !
+          .
         </p>
       </div>
-      <h2>Lev the Artist</h2>
+      <h2 className="pb-1">Lev the Artist</h2>
       <div className="left-border">
         <p>
-          I love building things off the computer. To that end I run my own
-          ceramics business, ADAMAH Ceramics, and arrange professional A Capella
-          music!
+          I love building things both on and off the computer! To the latter
+          end, I run my own ceramics business, ADAMAH Ceramics, and arrange
+          professional A Capella music.
         </p>
         <br />
         <p>

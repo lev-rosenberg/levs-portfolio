@@ -26,9 +26,8 @@ export default function Home() {
         </p>
         <br />
         <p>
-          I also run a small ceramics business. And I arrange professional A
-          Capella music on the side. Check out everything I&apos;ve been working
-          on{" "}
+          I also run a small ceramics business & arrange professional A Capella
+          music on the side. Check out everything I&apos;ve been working on{" "}
           <Link href="/Projects">
             <button className="mt-0">here</button>
           </Link>
