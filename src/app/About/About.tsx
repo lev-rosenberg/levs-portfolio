@@ -56,9 +56,9 @@ export default function About() {
         <p>
           As a pottery, I make functional work––I want to make things that
           people will actually use. But that’s not to say there&apos;s no room
-          for artistry. Whether it's a mug with a hand-shaped base or a teapot
-          shaped like a torus form, my favorite part of ceramics is making art
-          and beauty an integral part of daily life.
+          for artistry. Whether it&apos;s a mug with a hand-shaped base or a
+          teapot shaped like a torus form, my favorite part of ceramics is
+          making art and beauty an integral part of daily life.
         </p>
       </div>
       <br />
