@@ -15,28 +15,28 @@ export default function About() {
       <h2>The Engineer</h2>
       <div className="left-border">
         <p>
-          Software engineering came at me from left field my freshman year when
-          a friend suggested I should take an intro computer science class. Now,
-          I had never touched coding in my life, but I&apos;m a curious guy, so
-          I tried it out. Immediately, I fell in love, captivated by the problem
-          solving, the creativity, the balance between big-picture concepts and
-          low-level details, and all of software&apos; broad applications in the
-          world. I quickly declared my CS major (later to compliment it with
-          cognitive science).
+          Software engineering came at me from left field. During my freshman
+          year, a friend suggested I take an intro to computer science class. I
+          had never touched code before, but my curiosity got the better of me,
+          and I decided to give it a shot. Immediately, I fell in love,
+          captivated by the problem solving, the creativity, the balance between
+          big-picture concepts and low-level details, and all of software&apos;
+          broad applications in the world. I quickly declared my CS major (later
+          to compliment it with cognitive science).
         </p>
         <br />
         <p>
           I easily found an outlet for creativity and design on the frontend
           side. My first couple professional roles were both frontend focused.
           But meanwhile I was always curious about what goes on behind the
-          scenes. And as soon as I discovered backend work and the
-          systems-thinking it engages, I was hooked. Soon, I started whipping up
-          full stack apps in my free time. Then, through some awesome classes at
-          Northwestern (shoutout DTR), I developed a deep appreciation for
-          human-computer interaction––bridging that gap between the technical
-          and the human. I realized that figuring out how people think and
-          behave is both fun and necessary if you want to build solutions that
-          resonate with real users.
+          scenes. And as soon as I discovered backend work, I was hooked by the
+          systems-thinking it engages. Soon, I started whipping up full stack
+          apps in my free time. Bridging the gap between the technical and the
+          human, rough some awesome classes at Northwestern (shoutout DTR), I
+          developed a deep appreciation for human-computer interaction. I
+          realized that figuring out how people think and behave is both
+          fascinating and necessary if you want to build solutions that resonate
+          with real users.
         </p>
       </div>
       <br />
