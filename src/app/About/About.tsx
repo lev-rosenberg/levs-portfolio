@@ -15,18 +15,18 @@ export default function About() {
       <h2>The Engineer</h2>
       <div className="left-border">
         <p>
-          Software engineering came at me from left field. I came into college
-          undecided until a friend told me I should take an intro CS class. Now,
-          I had never touched coding in my life, and didn&apos;t have any plans
-          to. But I&apos;m a curious guy, so I tried it out. Immediately, I fell
-          in love. I was captivated by the problem solving, the systems
-          thinking, the creativity, the balance between big-picture concepts and
+          Software engineering came at me from left field my freshman year when
+          a friend suggested I should take an intro computer science class. Now,
+          I had never touched coding in my life, but I&apos;m a curious guy, so
+          I tried it out. Immediately, I fell in love, captivated by the problem
+          solving, the creativity, the balance between big-picture concepts and
           low-level details, and all of software&apos; broad applications in the
-          world.
+          world. I quickly declared my CS major (later to compliment it was
+          cognitive science).
         </p>
         <br />
         <p>
-          I quickly found an outlet for creativity and design on the frontend
+          I easily found an outlet for creativity and design on the frontend
           side. My first couple professional roles were both frontend focused.
           But meanwhile I was always curious about what goes on behind the
           scenes. And as soon as I discovered backend work and the
@@ -46,7 +46,7 @@ export default function About() {
           Beyond the technical, I spend most of my time making music and
           pottery. I&apos;m a singer and pianist, but favorite part of music is
           arranging it. Drilling deep on the details of specific chords and
-          voicings, but also drawing back and architecting the rise and fall of
+          voicings, but also pulling back and architecting the rise and fall of
           a song. Being creative and subverting expectations. And always
           thinking about the people I&apos;m arranging for. What are their
           strengths and weaknesses as musicians and how can I craft an
@@ -54,11 +54,11 @@ export default function About() {
         </p>{" "}
         <br />
         <p>
-          As a pottery, I make functional work––I want to make things that
-          people will actually use. But that’s not to say there&apos;s no room
-          for artistry. Whether it&apos;s a mug with a hand-shaped base or a
-          teapot shaped like a torus form, my favorite part of ceramics is
-          making art and beauty an integral part of daily life.
+          As a potter, I make functional work––I want to make things that people
+          will actually use. But that’s not to say there&apos;s no room for
+          artistry. Whether it&apos;s a mug with a hand-shaped base or a teapot
+          shaped like a torus form, my favorite part of ceramics is making art
+          and beauty an integral part of daily life.
         </p>
       </div>
       <br />
