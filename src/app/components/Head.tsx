@@ -7,9 +7,9 @@ import { useContext } from "react";
 import { Context } from "../context";
 export default function Head() {
   const pathname = usePathname();
-  const { state } = useContext(Context);
+  // const { state } = useContext(Context);
   return (
-    <header style={{ fontSize: `${state.fontSize}px` }}>
+    <header style={{ fontSize: "16px" }}>
       <FontControl />
       <NavBar />
       <ThemeToggle />

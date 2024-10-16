@@ -17,7 +17,7 @@ export default function Projects() {
       >
         <>
           <h1>
-            <strong className="text-5xl">My Work</strong>
+            <strong>My Work</strong>
           </h1>
           <div className="left-border">
             <div className="flex gap-3 overflow-scroll">

@@ -5,7 +5,7 @@ export default function Contact() {
   const { state } = useContext(Context);
   return (
     <div
-      className="left-page top-page resume-page"
+      className="left-page top-page"
       style={{ fontSize: `${state.fontSize}px` }}
     >
       <h1>
