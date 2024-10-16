@@ -21,7 +21,7 @@ export default function About() {
           I tried it out. Immediately, I fell in love, captivated by the problem
           solving, the creativity, the balance between big-picture concepts and
           low-level details, and all of software&apos; broad applications in the
-          world. I quickly declared my CS major (later to compliment it was
+          world. I quickly declared my CS major (later to compliment it with
           cognitive science).
         </p>
         <br />
